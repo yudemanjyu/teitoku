@@ -178,8 +178,11 @@ $win.on 'app:keyup', (event, keyCode) ->
 
     when 77 # M, Restore
       unless $state.klock
+        pos_x = $screen.width / 2 - $state.start.width / 2
+        pos_y = $screen.height / 2 - $state.start.height / 2
         gui.Window.get().leaveFullscreen()
         gui.Window.get().resizeTo $state.start.width, $state.start.height
+        gui.Window.get().moveTo pos_x, pos_y
         $win.trigger 'app:modal', 'Restore size.'
 
     when 82 # R, Reload
