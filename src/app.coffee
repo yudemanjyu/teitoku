@@ -200,21 +200,21 @@ $win.on 'app:keyup', (event, keyCode) ->
     when 49 # 1, Move to Left-Top
       gui.Window.get().resizeTo $state.start.width / 2, $state.start.height / 2
       gui.Window.get().moveTo 0, 0
-      $win.trigger 'app:modal', 'Move to Left-Top'
+      $win.trigger 'app:modal', 'Move to Left-Top.'
 
     when 50 # 2, Move to Left-Bottom
       pos_y = $screen.height - $state.start.height / 2
 
       gui.Window.get().resizeTo $state.start.width / 2, $state.start.height / 2
       gui.Window.get().moveTo 0, pos_y
-      $win.trigger 'app:modal', 'Move to Left-Bottom'
+      $win.trigger 'app:modal', 'Move to Left-Bottom.'
 
     when 51 # 3, Move to Right-Top
       pos_x = $screen.width - $state.start.width / 2
 
       gui.Window.get().resizeTo $state.start.width / 2, $state.start.height / 2
       gui.Window.get().moveTo pos_x, 0
-      $win.trigger 'app:modal', 'Move to Right-Top'
+      $win.trigger 'app:modal', 'Move to Right-Top.'
 
     when 52 # 4, Move to Right-Bottom
       pos_x = $screen.width - $state.start.width / 2
@@ -222,7 +222,7 @@ $win.on 'app:keyup', (event, keyCode) ->
 
       gui.Window.get().resizeTo $state.start.width / 2, $state.start.height / 2
       gui.Window.get().moveTo pos_x, pos_y
-      $win.trigger 'app:modal', 'Move to Right-Bottom'
+      $win.trigger 'app:modal', 'Move to Right-Bottom.'
 
     else
       console.debug keyCode
